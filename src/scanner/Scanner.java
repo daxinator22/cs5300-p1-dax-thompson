@@ -15,6 +15,7 @@ public class Scanner {
   private HashMap<Character, String> classifierTable;
   private HashMap<String, String> transitionTable;
   private HashMap<String, String> tokenTypeTable;
+  private String currentState;
 
   //------------------------------------------------------------
   // TODO: build your tables in the constructor and implement
@@ -33,6 +34,7 @@ public class Scanner {
     this.classifierTable = new HashMap<>();
     this.transitionTable = new HashMap<>();
     this.tokenTypeTable = new HashMap<>();
+    this.currentState = "s0";
 
     // Build catMap, mapping a character to a category.
     for (TableReader.CharCat cat : tableReader.getClassifier()) {
@@ -117,7 +119,27 @@ public class Scanner {
     // TODO: get a single token. This is an implementation of the nextToken
     // algorithm given in class. You may *not* use TableReader in this
     // function. Return null if there is a lexical error.
-    return null;
+    String lexem = "";
+    while(!ss.eof()){
+      char currentChar = ss.next();
+      String category = getCategory(currentChar);
+      if(category != "not in alphabet"){
+        String nextState = getNewState(currentState, category);
+        if(nextState != "error"){
+          currentState = nextState;
+          lexem += currentChar;
+        }
+        else{
+          return null;
+        }
+      }
+      else{
+        return null;
+      }
+    }
+    System.out.println(String.format("Found lexem: %s", lexem));
+
+    return new Token(currentState, lexem);
   }
 
 }

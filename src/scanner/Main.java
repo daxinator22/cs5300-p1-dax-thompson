@@ -74,7 +74,7 @@ public class Main {
     //------------------------------------------------------------
     {
       ScanStream ss = getDataStream("data/test1-reg.txt");
-//      testToken(scanner, ss, "register", "r302");
+      testToken(scanner, ss, "register", "r302");
 //      testToken(scanner, ss, "ignore");
 //      testToken(scanner, ss, "register", "r02");
 //      testToken(scanner, ss, "ignore");
@@ -106,7 +106,7 @@ public class Main {
 
     String tableFile = "data/hexadecimal.table";
     TableReader tableReader = new TableReader(tableFile);
-    Scanner scanner = new Scanner(tableReader);
+    //Scanner scanner = new Scanner(tableReader);
 
 //    tests.test(scanner.getCategory('x').equals("x"));
 //    tests.test(scanner.getCategory('0').equals("zero"));
