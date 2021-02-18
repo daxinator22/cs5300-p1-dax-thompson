@@ -119,27 +119,32 @@ public class Scanner {
     // TODO: get a single token. This is an implementation of the nextToken
     // algorithm given in class. You may *not* use TableReader in this
     // function. Return null if there is a lexical error.
+    currentState = "s0";
     String lexem = "";
-    while(!ss.eof()){
+    Stack<String> stack = new Stack<>();
+    stack.push("bad");
+    while(currentState != "error"){
       char currentChar = ss.next();
+      lexem += currentChar;
+      if (tokenTypeTable.containsKey(currentState)){
+        stack.clear();
+      }
+      stack.push(currentState);
       String category = getCategory(currentChar);
-      if(category != "not in alphabet"){
-        String nextState = getNewState(currentState, category);
-        if(nextState != "error"){
-          currentState = nextState;
-          lexem += currentChar;
-        }
-        else{
-          return null;
-        }
-      }
-      else{
-        return null;
-      }
+      currentState = getNewState(currentState, category);
     }
-    System.out.println(String.format("Found lexem: %s", lexem));
 
-    return new Token(currentState, lexem);
+    while (!tokenTypeTable.containsKey(currentState) && currentState != "bad"){
+      currentState = stack.pop();
+      lexem = lexem.substring(0, lexem.length() - 1);
+      ss.rollback();
+    }
+
+    if (tokenTypeTable.containsKey(currentState))
+      return new Token(getTokenType(currentState), lexem);
+    else{
+      return null;
+    }
   }
 
 }

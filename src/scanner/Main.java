@@ -74,25 +74,25 @@ public class Main {
     //------------------------------------------------------------
     {
       ScanStream ss = getDataStream("data/test1-reg.txt");
-      testToken(scanner, ss, "register", "r302");
+//      testToken(scanner, ss, "register", "r302");
 //      testToken(scanner, ss, "ignore");
 //      testToken(scanner, ss, "register", "r02");
 //      testToken(scanner, ss, "ignore");
 //      testToken(scanner, ss, "register", "r233987");
     }
-//    {
-//      ScanStream ss = getDataStream("data/err1-reg.txt");
-//      testToken(scanner, ss, null);
-//    }
-//    {
-//      ScanStream ss = getDataStream("data/err2-reg.txt");
-//      testToken(scanner, ss, null);
-//    }
-//    {
-//      ScanStream ss = getDataStream("data/err3-reg.txt");
+    {
+      ScanStream ss = getDataStream("data/err1-reg.txt");
+      testToken(scanner, ss, null);
+    }
+    {
+      ScanStream ss = getDataStream("data/err2-reg.txt");
+      testToken(scanner, ss, null);
+    }
+    {
+      ScanStream ss = getDataStream("data/err3-reg.txt");
 //      testToken(scanner, ss, "register", "r33");
-//      testToken(scanner, ss, null);
-//    }
+      testToken(scanner, ss, null);
+    }
   }
 
   private static void runHexTests() throws FileNotFoundException, IOException {
@@ -106,8 +106,8 @@ public class Main {
 
     String tableFile = "data/hexadecimal.table";
     TableReader tableReader = new TableReader(tableFile);
-    //Scanner scanner = new Scanner(tableReader);
-
+//    Scanner scanner = new Scanner(tableReader);
+//
 //    tests.test(scanner.getCategory('x').equals("x"));
 //    tests.test(scanner.getCategory('0').equals("zero"));
 //    tests.test(scanner.getCategory('8').equals("digit"));
