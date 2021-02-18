@@ -12,7 +12,9 @@ public class Scanner {
   // TODO: declare the HashMaps that you will use to store
   // your tables. Also declare the start state.
   //------------------------------------------------------------
-
+  private HashMap<Character, String> classifierTable;
+  private HashMap<String, String> transitionTable;
+  private HashMap<String, String> tokenTypeTable;
 
   //------------------------------------------------------------
   // TODO: build your tables in the constructor and implement
@@ -28,11 +30,17 @@ public class Scanner {
     // to also implement the test functions below once you have your
     // tables built.
 
+    this.classifierTable = new HashMap<>();
+    this.transitionTable = new HashMap<>();
+    this.tokenTypeTable = new HashMap<>();
+
     // Build catMap, mapping a character to a category.
     for (TableReader.CharCat cat : tableReader.getClassifier()) {
       System.out.println("Character " + cat.getC() + " is of category "
               + cat.getCategory());
+      classifierTable.put(cat.getC(), cat.getCategory());
     }
+    System.out.printf("The size of the Classifier Table is: %d\n", classifierTable.size());
 
     // Build the transition table. Given a state and a character category,
     // give a new state.
