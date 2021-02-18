@@ -123,7 +123,7 @@ public class Scanner {
     String lexem = "";
     Stack<String> stack = new Stack<>();
     stack.push("bad");
-    while(currentState != "error"){
+    while(currentState != "error" && !ss.eof()){
       char currentChar = ss.next();
       lexem += currentChar;
       if (tokenTypeTable.containsKey(currentState)){
@@ -136,7 +136,9 @@ public class Scanner {
 
     while (!tokenTypeTable.containsKey(currentState) && currentState != "bad"){
       currentState = stack.pop();
-      lexem = lexem.substring(0, lexem.length() - 1);
+      if(lexem.length() > 0) {
+        lexem = lexem.substring(0, lexem.length() - 1);
+      }
       ss.rollback();
     }
 
