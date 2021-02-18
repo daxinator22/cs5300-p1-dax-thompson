@@ -40,20 +40,24 @@ public class Scanner {
               + cat.getCategory());
       classifierTable.put(cat.getC(), cat.getCategory());
     }
-    System.out.printf("The size of the Classifier Table is: %d\n", classifierTable.size());
+    //System.out.printf("The size of the Classifier Table is: %d\n", classifierTable.size());
 
     // Build the transition table. Given a state and a character category,
     // give a new state.
     for (TableReader.Transition t : tableReader.getTransitions()) {
       System.out.println(t.getFromStateName() + " -- " + t.getCategory()
               + " --> " + t.getToStateName());
+      transitionTable.put(String.format("%s,%s", t.getFromStateName(), t.getCategory()), t.getToStateName());
     }
+    //System.out.printf("The size of the Transition Table is: %d\n", transitionTable.size());
 
     // Build the token types table
     for (TableReader.TokenType tt : tableReader.getTokens()) {
       System.out.println("State " + tt.getState()
               + " accepts with the lexeme being of type " + tt.getType());
+      tokenTypeTable.put(tt.getState(), tt.getType());
     }
+    //System.out.printf("The size of the Token Type Table is: %d\n", tokenTypeTable.size());
 
   }
 
@@ -63,7 +67,12 @@ public class Scanner {
    * or two. You should not have any character literals in here such as 'r' or '3'.
    */
   public String getCategory(Character c) {
-    return "";
+
+    if(classifierTable.containsKey(c)){
+      return classifierTable.get(c);
+    }
+
+    return "not in alphabet";
   }
 
   /**
@@ -73,7 +82,14 @@ public class Scanner {
    * table lookups here.
    */
   public String getNewState(String state, String category) {
-    return "";
+
+    String key = String.format("%s,%s", state, category);
+
+    if(transitionTable.containsKey(key)){
+      return transitionTable.get(key);
+    }
+
+    return "error";
   }
 
   /**
@@ -82,7 +98,12 @@ public class Scanner {
    * Do not hardcode any state names or token types.
    */
   public String getTokenType(String state) {
-    return "";
+
+    if(tokenTypeTable.containsKey(state)){
+      return tokenTypeTable.get(state);
+    }
+
+    return "error";
   }
 
   //------------------------------------------------------------

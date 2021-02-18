@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="957c7707-a894-43bb-9813-d7202023797c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cs5300-p1-dax-thompson/scanner/Scanner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cs5300-p1-dax-thompson/scanner/Scanner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cs5300-p1-dax-thompson/scanner/data/err1-hex.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cs5300-p1-dax-thompson/scanner/data/err1-reg.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cs5300-p1-dax-thompson/scanner/data/err2-hex.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cs5300-p1-dax-thompson/scanner/data/err2-reg.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cs5300-p1-dax-thompson/scanner/data/err3-hex.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cs5300-p1-dax-thompson/scanner/data/err3-reg.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cs5300-p1-dax-thompson/scanner/data/hexadecimal.table" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cs5300-p1-dax-thompson/scanner/data/register.table" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cs5300-p1-dax-thompson/scanner/data/test1-hex.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cs5300-p1-dax-thompson/scanner/data/test1-reg.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/err1-hex.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/err1-reg.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/err2-hex.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/err2-reg.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/err3-hex.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/err3-reg.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/hexadecimal.table" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/register.table" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/test1-hex.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/test1-reg.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scanner/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scanner/Scanner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,21 +71,21 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1613608639203">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1613609565148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/-1600.-178.1600.860/1920.-178.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613608639203" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1613608639202">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/-1600.-178.1600.860/1920.-178.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613609565148" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1613609565148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/-1600.-178.1600.860/1920.-178.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613608639202" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1613608639202">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/-1600.-178.1600.860/1920.-178.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613609565148" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1613609565148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/-1600.-178.1600.860/1920.-178.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613608639202" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1613608639202">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/-1600.-178.1600.860/1920.-178.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613609565148" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1613609565148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/-1600.-178.1600.860/1920.-178.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613608639202" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/-1600.-178.1600.860/1920.-178.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613609565148" />
   </component>
 </project>
